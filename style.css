@@ -1,3 +1,7 @@
+/* =========================
+   RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +11,10 @@
 body {
   font-family: Arial, sans-serif;
 }
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
   height: 75px;
@@ -48,6 +56,13 @@ body {
   border-radius: 6px;
 }
 
+.nav-btn:hover {
+  background: #123d85;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero {
   min-height: 600px;
@@ -105,10 +120,23 @@ body {
   color: white;
 }
 
+.primary-btn:hover {
+  background: #123d85;
+}
+
 .secondary-btn {
   border: 2px solid #174ea6;
   color: #174ea6;
 }
+
+.secondary-btn:hover {
+  background: #174ea6;
+  color: white;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
 
 .hero-image {
   width: 420px;
@@ -137,27 +165,11 @@ body {
   font-size: 24px;
 }
 
-@media (max-width: 800px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
+/* =========================
+   FOOTER
+========================= */
 
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-image {
-    width: 100%;
-    max-width: 420px;
-  }
-  
-  
-  .footer {
+.footer {
   background: #172b4d;
   color: white;
   padding-top: 60px;
@@ -167,6 +179,7 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 0 8% 50px;
+
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 50px;
@@ -186,6 +199,8 @@ body {
   line-height: 1.7;
 }
 
+/* Footer Links */
+
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -201,11 +216,15 @@ body {
   color: white;
 }
 
+/* Footer Contact */
+
 .footer-contact {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+
+/* Copyright */
 
 .copyright {
   text-align: center;
@@ -213,10 +232,108 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 700px) {
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  /* Navbar */
+
+  .navbar {
+    height: auto;
+    padding: 20px 5%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  /* Hero */
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  /* Footer */
+
   .footer-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 35px;
+  }
+
+  .footer-links {
+    align-items: center;
   }
 }
 
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-btn {
+    display: inline-block;
+  }
+
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
+
+  .image-box span {
+    font-size: 70px;
+  }
+
+  .image-box h3 {
+    font-size: 20px;
+  }
+}
